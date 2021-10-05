@@ -8,8 +8,13 @@ function App() {
       <ErrorBoundary>
         <Head />
         <Section />
-      </ErrorBoundary>
+        <footer id="footer">
+          <img src="https://www.desktopbackground.org/download/1280x900/2013/12/07/681835_black-and-white-iron-man_1600x900_h.jpg" alt="footer"></img>
+          <span>Кто знает как сделать так, что бы при нажатии на, например, кнопку в главном меню автоматически совершался переход к нужному месту страницы? Помогите?!
 
+          </span>
+        </footer>
+      </ErrorBoundary>
     </>
   );
 }

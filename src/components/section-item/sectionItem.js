@@ -13,9 +13,6 @@ const SectionItem = ({ id }) => {
     useEffect(() => {
         if (id) {
             services.getCharacter(id).then(res => {
-
-                // console.log(res.data.results[0].comics.items);
-                // console.log(res.data.results[0].comics.items[0].name.split(' ').length-1);
                 setState({
                     arr: res.data.results[0].comics.items,
                     url: res.data.results[0].thumbnail.path + '.' + res.data.results[0].thumbnail.extension,

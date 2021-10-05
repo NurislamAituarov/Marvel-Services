@@ -1,0 +1,32 @@
+.block__test{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.form_wrapper{
+    margin: 0 auto;
+    background-color: aqua;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px 1px black;
+    input{
+        margin: 2px 1px;
+        padding: 5px;
+        outline: none;
+        border-radius: 10px;
+    }
+    button{
+        padding: 5px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .2s;
+    }
+    button:hover{
+        transform: translateY(2px) translateX(2px);
+    }
+}
+
+.btnColor{
+    border: 3px solid red;
+    // background-color: red;
+}
