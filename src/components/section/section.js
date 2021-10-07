@@ -1,6 +1,6 @@
 import './section.scss'
 import Services from '../../services/services'
-import { createRef, useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import SectionItem from '../section-item/sectionItem';
 import ErrorBoundary from '../../error/error-boundary';
 import Spinner from '../../spinner/spinner';
@@ -11,49 +11,40 @@ const Section = () => {
     const [id, setId] = useState('');
     const [offset, setOffset] = useState(219)
     const [btnLoading, setBtnLoading] = useState(false)
-    // const myRef = createRef()
     useEffect(() => {
         services.getCharacters().then(elem => {
-            setState({
-                state: elem.data.results
-            })
+            setState((state) => [...state, ...elem.data.results])
         })
     }, [])
     const onClick = (id) => {
         setId(id)
     }
-    const itemRefs = [];
-    const setRef = (ref) => {
-        itemRefs.push(ref)
-    }
-    const myRef = (id) => {
-        // console.log(itemRefs);
-        itemRefs.forEach(elem => elem.classList.remove('show'));
-        itemRefs[id].classList.add('show')
-        itemRefs[id].focus()
+    const itemRefs = useRef([])
+    const focusOnItem = (id) => {
+        itemRefs.current.forEach(elem => elem.classList.remove('show'));
+        itemRefs.current[id].classList.add('show')
+        itemRefs.current[id].focus()
     }
     const elements = () => {
         if (state.length === 0) {
             return <Spinner />
         } else {
-            return state.state.map((elem, i) => {
+            return state.map((elem, i) => {
                 return (
                     <div
-                        onClick={() => {
-                            onClick(elem.id);
-                            myRef(i)
-                        }}
                         onKeyPress={(e) => {
                             if (e.code === 'KeyI' || e.code === "Enter") {
-                                console.log('further');
-                                // myRef.current.focus()
-                                myRef(i)
+                                focusOnItem(i)
                                 onClick(elem.id)
                             }
                         }}
-                        ref={setRef}
-                        key={elem.id}
+                        ref={(el) => itemRefs.current[i] = el}
                         tabIndex={0}
+                        key={elem.id}
+                        onClick={() => {
+                            onClick(elem.id);
+                            focusOnItem(i)
+                        }}
                         className="sect__item">
                         <img src={elem.thumbnail.path + '.' + elem.thumbnail.extension} alt="img"></img>
                         <div>
@@ -66,14 +57,11 @@ const Section = () => {
     }
     const onCharactersAll = (offset) => {
         setBtnLoading(true)
-        setOffset(offset + 9)
+        setOffset(offset => offset + 9)
         services.getCharacters(offset).then(elem => {
             setBtnLoading(false)
-            setState({
-                state: [...state.state, ...elem.data.results]
-            })
+            setState((state) => [...state, ...elem.data.results])
         })
-
     }
     return (
         <>

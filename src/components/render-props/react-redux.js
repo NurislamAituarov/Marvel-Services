@@ -1,46 +1,29 @@
-import { useState } from "react";
-import { bindActionCreators, createStore } from "redux";
+import { createStore } from "redux";
+import One from "./one";
+import {Provider} from 'react-redux'
 
+const reducer = (state = 0, action) => {
+    switch (action.type) {
+        case "INC":
+            return state + 1;
+        case "DEC":
+            return state - 1;
+        case "RND":
+            return state + action.payload
+        default:
+            return state;
+    }
+}
+const store = createStore(reducer)
+export const inc = () => ({ type: "INC" })
+export const dec = () => ({ type: "DEC" })
+export const rnd = () => ({type: "RND", payload: Math.floor(Math.random()*10)})
 
 const ReactRedux = () => {
-    const reducer = (state = 0, action) => {
-        switch (action.type) {
-            case "INC":
-                return state + 1;
-            case "DEC":
-                return state - 1;
-            default:
-                return state;
-        }
-    }
-    const [counter, setCounter] = useState(0)
-    const store = createStore(reducer)
-    const inc = () => ({ type: "INC" })
-    const dec = () => ({ type: "DEC" })
-    const {incDispatch, decDispatch} = bindActionCreators({
-        incDispatch: inc,
-        decDispatch: dec
-    },store.dispatch)
-
-    const onClickInc = () => {
-        incDispatch()
-        // store.dispatch(inc())
-    }
-    const onClickDec = () => {
-        decDispatch()
-        // store.dispatch(dec())
-    }
-    const update = () => {
-        // console.log(store.getState());
-        setCounter(counter + store.getState())
-    }
-    store.subscribe(update)
     return (
-        <>
-            <button onClick={onClickInc}>INC</button>
-            <button onClick={onClickDec}>DEC</button>
-            <span>{counter}</span>
-        </>
+        <Provider store={store}>
+            <One />
+        </Provider> 
     )
 }
 export default ReactRedux;
