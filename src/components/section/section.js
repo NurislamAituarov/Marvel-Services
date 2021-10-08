@@ -63,6 +63,8 @@ const Section = () => {
             setState((state) => [...state, ...elem.data.results])
         })
     }
+
+    
     return (
         <>
             <div className="wrapper">

@@ -44,6 +44,7 @@
     }
 }
 .sect__item:hover{
+    transform: translateY(5px);
     box-shadow: 5px 5px 5px 1px black;
 }
 .sect__item h2:hover{
@@ -55,7 +56,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 5px;
+    gap: 15px;
     box-shadow: -2px -2px 5px 1px rgb(148, 139, 139);
 }
 .sect2{
@@ -88,6 +89,7 @@
 
 ///////////////////
 .show{
-    transform: scale(.9);
+    transform: translateY(5px);
+    box-shadow: 5px 5px 5px 1px black;
 } 
 

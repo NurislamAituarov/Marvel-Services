@@ -1,3 +1,4 @@
+
 .information{
   display: flex;
   justify-content: space-between;
@@ -5,9 +6,18 @@
   margin-bottom: 30px;
   padding: 10px;
   h1{
+    color: black;
+    transition: .3s;
+    cursor: pointer;
     strong{
       color: red;
     }
+  }
+  h1:hover{
+    transform: translateX(3px) translateY(3px);
+  }
+  a{
+    text-decoration: none;
   }
   div{
     a{

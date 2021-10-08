@@ -54,8 +54,8 @@ const View = ({ state }) => {
                     <h3>{state.name}</h3>
                     <span>{state.description}</span>
                     <div>
-                        <a href={state.homepage} ><button>homepage</button></a>
-                        <a href={state.wiki}><button>wiki</button></a>
+                        <a href={state.homepage}  target="_blank"><button>homepage</button></a>
+                        <a href={state.wiki} target="_blank"><button>wiki</button></a>
                     </div>
                 </div>
             </>
@@ -70,8 +70,8 @@ const View = ({ state }) => {
                 <h3>{state.name}</h3>
                 <span>{description} <strong>...</strong></span>
                 <div>
-                    <a href={state.homepage} ><button>homepage</button></a>
-                    <a href={state.wiki}><button>wiki</button></a>
+                    <a href={state.homepage} target="_blank"><button>homepage</button></a>
+                    <a href={state.wiki} target="_blank"><button>wiki</button></a>
                 </div>
             </div>
         </>

@@ -3,7 +3,7 @@ footer{
     display: flex;
     align-items: center;
     position: absolute;
-    width: 1348px;
+    width: 1349.4px;
     left: 0;
     height: 100px;
     background-color: rgb(0, 0, 0);
@@ -11,6 +11,17 @@ footer{
     font-size: 12px;
     img{
         max-width: 180px;
+    }
+}
+
+@media (max-width: 1000px){
+    footer{
+        width: 1000px;
+    }
+}
+@media (max-width: 700px){
+    footer{
+        width: 700px;
     }
 }
 
