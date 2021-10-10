@@ -12,16 +12,15 @@ const ComicsItem = () => {
             .then((arr) => setComic(arr.data.results))
 
     }, [comicsId])
-
     const contentItemComic = () => {
         if (comic) {
             return comic.map((elem) => {
                 let descrip = elem.description;
                 let price = elem.prices.price;
-                if(!elem.prices.price){
+                if (!elem.prices.price) {
                     price = 'not available'
                 }
-                if(!elem.description){
+                if (!elem.description) {
                     descrip = 'no description'
                 }
                 return (
@@ -47,3 +46,6 @@ const ComicsItem = () => {
     )
 }
 export default ComicsItem;
+
+
+
