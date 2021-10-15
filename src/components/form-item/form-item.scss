@@ -1,0 +1,32 @@
+.wrapper__char{
+    margin-top: 50px;
+    box-sizing: border-box;
+    max-width: 100%;
+    display: flex;
+    div{
+        max-width: 400px;
+    }
+    h2{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        margin-right: 50px;
+    }
+}
+.header{
+    max-width: 100%;
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: blanchedalmond;
+    overflow: hidden;
+    img{
+        width: 300px;
+        height: auto;
+    }
+}

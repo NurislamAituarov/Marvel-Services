@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import SectionItem from '../section-item/sectionItem';
 import ErrorBoundary from '../../error/error-boundary';
 import Spinner from '../../spinner/spinner';
+import SearchFormik from '../search-character/SearchFormik';
 
 const Section = () => {
     const services = new Services();
@@ -29,6 +30,19 @@ const Section = () => {
         if (state.length === 0) {
             return <Spinner />
         } else {
+            const anchors = document.querySelectorAll('a[href*="#"]')
+            for (let anchor of anchors) {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault()
+
+                    const blockID = anchor.getAttribute('href').substr(1)
+
+                    document.getElementById(blockID).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                })
+            }
             return state.map((elem, i) => {
                 return (
                     <div
@@ -64,7 +78,6 @@ const Section = () => {
         })
     }
 
-    
     return (
         <>
             <div className="wrapper">
@@ -75,6 +88,7 @@ const Section = () => {
                     <ErrorBoundary>
                         <SectionItem id={id} />
                     </ErrorBoundary>
+                    <SearchFormik/>
                 </div>
                 <div className="iron">
                     <img src="https://msk.musbot.ru/img/iron-man1.png" alt="iron"></img>

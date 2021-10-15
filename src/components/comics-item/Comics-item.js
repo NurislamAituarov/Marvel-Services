@@ -1,8 +1,10 @@
+import { Helmet } from 'react-helmet';
 import './comics-item.scss';
 import { NavLink, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Services from '../../services/services';
 import Spinner from '../../spinner/spinner'
+
 const ComicsItem = () => {
     const [comic, setComic] = useState();
     const { comicsId } = useParams();
@@ -41,6 +43,13 @@ const ComicsItem = () => {
     }
     return (
         <>
+            <Helmet>
+                <meta
+                    name="description"
+                    content="Web site created using create-react-app"
+                />
+                <title>{comic ? `${comic[0].title}` : 'comic'}</title>
+            </Helmet>
             {contentItemComic()}
         </>
     )

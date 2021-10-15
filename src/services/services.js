@@ -18,5 +18,8 @@ export default class Services {
     getComic(comicId){
         return this.getServices(`https://gateway.marvel.com:443/v1/public/comics/${comicId}?apikey=140972321aad3708a9bba9e320ce9b8b`)
     }
+    getSearchCharacter(name= 'Thor'){
+        return this.getServices(`https://gateway.marvel.com:443/v1/public/characters?name=${name}&apikey=140972321aad3708a9bba9e320ce9b8b`)
+    }
 
 }

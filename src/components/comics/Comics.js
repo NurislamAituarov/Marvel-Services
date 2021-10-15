@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import './comics.scss'
 import Services from '../../services/services'
 import { useState, useEffect, useRef } from 'react'
@@ -10,6 +11,7 @@ const Comics = () => {
     const [offset, setOffset] = useState(108);
     const itemRefs = useRef([]);
     const [btnActive, setBtn] = useState(false)
+
     useEffect(() => {
         services.getComics()
             .then((comics) => {
@@ -24,7 +26,6 @@ const Comics = () => {
     }
     const onClickItemComics = (id) => {
         onFocus(id);
-        console.log('click');
     }
     const comicsItem = () => {
         if (arr) {
@@ -65,6 +66,13 @@ const Comics = () => {
     }
     return (
         <>
+            <Helmet>
+                <meta
+                    name="description"
+                    content="Page with list of our comics"
+                />
+                <title>Comics page</title>
+            </Helmet>
             <div className="wrapperComics">
                 <div className="block">
                     <img src="https://get.wallhere.com/photo/Marvel-Comics-Marvel-Girl-Black-Cat-Felicia-Hardy-white-hair-mask-superheroines-cat-girl-catsuit-latex-black-latex-leather-leather-clothing-1855119.jpg" alt="comics_img"></img>

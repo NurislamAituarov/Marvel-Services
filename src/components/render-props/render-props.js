@@ -1,6 +1,8 @@
+import { Helmet } from 'react-helmet'
 import { useState } from 'react'
 import Keydown from './keydown'
 import ReactRedux from './react-redux'
+import AppForm from './test-memo'
 
 export const Count = ({ state }) => {
     return <span>{state}</span>
@@ -12,12 +14,20 @@ const RenderProps = ({ render }) => {
     }
     return (
         <>
+            <Helmet>
+                <meta
+                    name="description"
+                    content="Web site created using create-react-app"
+                />
+                <title>Render props</title>
+            </Helmet>
             <button onClick={onCount}>count</button>
             {
                 render(state)
             }
-            <ReactRedux/>
-            <Keydown/>
+            <AppForm />
+            {/* <ReactRedux/>
+            <Keydown/> */}
         </>
     )
 }

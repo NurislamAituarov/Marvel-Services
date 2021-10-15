@@ -4,6 +4,7 @@ import './index.scss'
 import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom'
 import RenderProps, { Count } from './components/render-props/render-props';
 import Spinner from './spinner/spinner';
+import FormItem from './components/form-item/Form-item'
 ////динамические импорты
 const App = lazy(() => import('./components/app/App'))
 const Comics = lazy(() => import('./components/comics/Comics'))
@@ -27,6 +28,7 @@ ReactDOM.render(
                     <Route exact path="/RenderProps"
                         component={() => (<RenderProps render={(counter) => (<Count state={counter} />)} />)}
                     />
+                    <Route exact path="/FormItem/:charId" component = {FormItem}/>
                 </Suspense>
 
             </div>

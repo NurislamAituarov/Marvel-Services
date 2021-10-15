@@ -1,0 +1,36 @@
+.form{
+    margin-top: 50px;
+    box-shadow: 3px 3px 5px 1px rgb(110, 110, 110);
+    padding: 10px 15px;
+    label{
+        font-size: 15px;
+        font-weight: 800;
+    }
+    input{
+        margin: 15px 20px 10px 0;
+        box-shadow: 3px 3px 5px 1px rgb(190, 190, 190);
+        border: none;
+        padding: 5px;
+    }
+    button{
+        cursor: pointer;
+        padding: 4px 15px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        color: white;
+        transition: .5s;
+    }
+    button:hover{
+        transform: translateX(5px) translateY(-5px);
+    }
+}
+.error{
+    color: red;
+}
+.formCharacter{
+    background-color: rgb(112, 43, 43);
+    box-shadow: 3px 3px 5px 1px rgb(121, 59, 59);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
