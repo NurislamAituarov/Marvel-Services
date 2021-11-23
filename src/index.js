@@ -16,13 +16,13 @@ ReactDOM.render(
     <Router>
       <div className="App">
         <div className="information">
-          <NavLink exact to="/">
+          <NavLink exact to="/Marvel-Services">
             <h1>
               <strong>Marvel</strong> information portal
             </h1>
           </NavLink>
           <div>
-            <NavLink exact activeStyle={{ color: 'red' }} to="/">
+            <NavLink exact activeStyle={{ color: 'red' }} to="/Marvel-Services/">
               Characters /{' '}
             </NavLink>
             <NavLink activeStyle={{ color: 'red' }} to="/Comics">
@@ -31,7 +31,7 @@ ReactDOM.render(
           </div>
         </div>
         <Suspense fallback={<Spinner />}>
-          <Route exact path="/" component={App} />
+          <Route exact path="/Marvel-Services" component={App} />
           <Route exact path="/Comics" component={Comics} />
           <Route exact path="/Comics/:comicsId" component={ComicsItem} />
 
