@@ -1,44 +1,54 @@
-
-.information{
+.information {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
   padding: 10px;
-  h1{
+  h1 {
     color: black;
-    transition: .3s;
+    transition: 0.3s;
     cursor: pointer;
-    strong{
+    strong {
       color: red;
     }
   }
-  h1:hover{
+  h1:hover {
     transform: translateX(3px) translateY(3px);
   }
-  a{
+  a {
     text-decoration: none;
   }
-  div{
-    a{
+  div {
+    a {
       font-weight: 900;
-      font-size: 20px;
+      font-size: 40px;
       color: black;
       cursor: pointer;
       list-style: none;
       text-decoration: none;
-      transition: .5s;
+      transition: 0.5s;
     }
-    a:hover{
+    a:hover {
       color: rgb(255, 0, 0);
       // font-weight: 600;
     }
   }
 }
 .App {
+  font-family: 'Estonia', cursive;
   padding: 20px;
+  padding-bottom: 0;
   margin: 0 auto;
-  max-width: 1000px;
-  height:auto;
+  max-width: 1500px;
+  height: auto;
+  font-size: 26px;
+  button {
+    font-family: 'Estonia', cursive;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 500;
+    border: none;
+  }
   // border: 1px solid black;
 }

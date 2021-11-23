@@ -1,85 +1,112 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
-.head{
-    display: flex;
-    justify-content: center;
-}
-.item{
+.head {
+  display: flex;
+  justify-content: space-around;
+  .item {
     padding: 20px;
     background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 200px;
+    width: 620px;
+    height: 250px;
     margin-bottom: 50px;
+    transition: 0.5s;
+  }
 }
-.item:first-child{
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 5px 1px rgb(196, 196, 196);
+
+.item:first-child {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px rgb(196, 196, 196);
+  img {
+    border-radius: 5px;
+  }
 }
 /* .item:last-child{
     background-color: cadetblue;
 } */
-.nameCharacter{
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    h3{
-        margin-bottom: 20px;
+.nameCharacter {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  h3 {
+    margin-bottom: 20px;
+  }
+  div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    button {
+      background-color: black;
+      color: blanchedalmond;
+      padding: 5px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 1s;
+      font-weight: bold;
+      border: none;
     }
-    div{
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-around;
-        button{
-            background-color: black;
-            color: blanchedalmond;
-            padding: 5px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: .5s;
-        }
-        button:hover{
-            background-color: rgb(255, 255, 255);
-            color: black;
-            transform: translateY(5px) translateX(5px);
-        }
+    button:hover {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      transform: scale(1.1);
     }
-}
-
-img{
-    width: 30%;
-    height: 100%;
+  }
 }
 
 /* //////////right */
 
+.item__2 {
+  text-align: start;
+  background-image: url('https://cdnb.artstation.com/p/assets/covers/images/001/510/489/large/eduardo-sanchez-banuelos-iron-man.jpg?1448337929');
+  background-size: cover;
+  color: seashell;
+  box-shadow: 0 0 5px 1px rgb(92, 92, 92);
+  button {
+    background-color: rgba(0, 0, 0, 0.301);
+    color: blanchedalmond;
+    padding: 10px 30px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 40px;
+    font-weight: bold;
+    border: none;
+  }
+  button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    // transform: scale(1.1);
+  }
+  h3 {
+    display: block;
+    max-width: 450px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+  }
+  span {
+    margin-left: 100px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
 
-.item__2{
-    text-align: start;
-    background-image: url('https://cdnb.artstation.com/p/assets/covers/images/001/510/489/large/eduardo-sanchez-banuelos-iron-man.jpg?1448337929');
-    background-size: cover;
-    color: seashell;
-    box-shadow: 0 0 5px 1px rgb(92, 92, 92);
-    button{
-        background-color: black;
-        color: blanchedalmond;
-        padding: 5px 50px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: .5s;
-    }
-    button:hover{
-        background-color: rgb(255, 255, 255);
-        color: black;
-        transform: translateY(5px) translateX(5px);
-    }
-    h3{
-        display: block;
-        max-width: 350px;
-        margin-bottom: 50px;
-    }
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }
