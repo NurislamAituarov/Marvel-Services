@@ -52,7 +52,7 @@ const Head = () => {
 
   // console.log(trigger);
   return (
-    <div className="head">
+    <div className="head" id="up">
       <TransitionGroup className="item">
         {loaded ? <Spinner /> : <View state={state} />}
       </TransitionGroup>

@@ -29,6 +29,7 @@ const SectionItem = ({ id }) => {
     <View state={state} />
   ) : (
     <ContentLoader
+      className="loader"
       width={450}
       height={200}
       viewBox="0 0 700 300"

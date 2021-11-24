@@ -64,3 +64,11 @@
     transform: scale(1.4);
   }
 }
+
+// media///////
+@media (max-width: 768px) {
+  .wrapper__char {
+    display: block;
+    padding-bottom: 50px;
+  }
+}

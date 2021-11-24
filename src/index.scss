@@ -52,3 +52,12 @@
   }
   // border: 1px solid black;
 }
+
+// media//////
+
+@media (max-width: 768px) {
+  .information {
+    display: block;
+    margin-bottom: 0;
+  }
+}

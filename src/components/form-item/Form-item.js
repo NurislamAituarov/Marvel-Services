@@ -33,7 +33,7 @@ const FormItem = () => {
           <h2>{char.name}</h2>
           <span>Description</span>
           <p>{char.description}</p>
-          <NavLink to="/">
+          <NavLink to="/Marvel-Services">
             <button>back</button>
           </NavLink>
         </div>

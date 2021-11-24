@@ -110,3 +110,47 @@
   opacity: 0;
   transition: opacity 500ms ease-in;
 }
+
+// media////
+
+@media (max-width: 768px) {
+  .head {
+    display: block;
+    .item {
+      img {
+        width: 100px;
+        height: auto;
+      }
+      max-width: 335px;
+      height: 200px;
+      padding: 10px;
+      margin-bottom: 0;
+      .nameCharacter {
+        height: max-content;
+        div {
+          margin: 0;
+          button {
+            font-size: 12px;
+            padding: 5px 20px;
+          }
+        }
+        h3 {
+          font-size: 25px;
+          margin: 0;
+        }
+        span {
+          margin: 0;
+        }
+      }
+    }
+    .item__2 {
+      span {
+        margin: 0;
+      }
+      button {
+        margin: 0;
+        padding: 0px 10px;
+      }
+    }
+  }
+}

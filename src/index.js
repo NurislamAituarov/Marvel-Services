@@ -16,7 +16,7 @@ ReactDOM.render(
     <Router>
       <div className="App">
         <div className="information">
-          <NavLink exact to="/Marvel-Services">
+          <NavLink to="/Marvel-Services">
             <h1>
               <strong>Marvel</strong> information portal
             </h1>

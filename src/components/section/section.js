@@ -104,7 +104,7 @@ const Section = () => {
             THE FOLLOWING
           </button>
         </a>
-        <a href="#sectItem">
+        <a href="#up">
           <button id="onUp" className="all">
             UP
           </button>

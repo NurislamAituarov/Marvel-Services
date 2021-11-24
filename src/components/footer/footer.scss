@@ -48,6 +48,10 @@ footer {
 }
 @media (max-width: 700px) {
   footer {
-    width: 700px;
+    display: block;
+    max-width: 100%;
+    .footer_contact {
+      margin: 20px auto;
+    }
   }
 }

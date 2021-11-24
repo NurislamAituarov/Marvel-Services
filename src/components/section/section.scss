@@ -100,3 +100,59 @@
   transform: translateY(5px);
   box-shadow: 5px 5px 5px 1px black;
 }
+
+// media//////
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    .sect {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 98.5%;
+      box-shadow: 0px 0px 1px 1px rgb(182, 182, 182, 0.5);
+      padding: 20px 10px;
+      .sect__item {
+        div {
+          max-width: 100%;
+        }
+        max-width: 100%;
+        height: 160px;
+        .sect_img {
+          max-width: 100%;
+        }
+      }
+    }
+    .sect2 {
+      .comics__item {
+        li {
+          font-size: 20px;
+        }
+      }
+      .section__item {
+        .sect_item_text {
+          h4 {
+            margin: 0;
+          }
+          button {
+            padding: 5px 15px;
+            font-size: 15px;
+          }
+        }
+      }
+      .loader {
+        width: 300px;
+        height: 140px;
+      }
+    }
+    .iron {
+      max-width: 180px;
+      bottom: -100px;
+    }
+  }
+  .section_bottom {
+    .all {
+      padding: 10px 20px;
+    }
+  }
+}

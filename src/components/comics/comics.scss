@@ -74,3 +74,24 @@
   transform: scale(0.9);
   // box-shadow: 5px 5px 5px 1px black;
 }
+
+// media////////////////////////////////////////////////
+
+@media (max-width: 768px) {
+  .information {
+    h1 {
+      // max-width: 0;
+    }
+  }
+  .wrapperComics {
+    .block__2 {
+      grid-template-columns: 1fr 1fr;
+      .comicsItem {
+        height: 316px;
+        span {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
