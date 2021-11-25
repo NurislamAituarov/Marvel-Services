@@ -57,6 +57,10 @@
 
 @media (max-width: 768px) {
   .information {
+    width: 335px;
+    h1 {
+      margin: 0;
+    }
     display: block;
     margin-bottom: 0;
   }

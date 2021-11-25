@@ -44,6 +44,7 @@
       font-size: 30px;
       color: rgb(250, 250, 250);
       cursor: pointer;
+      margin-top: 20px;
     }
   }
 }
@@ -122,6 +123,10 @@
           max-width: 100%;
         }
       }
+      .sect__item:hover {
+        transform: translateY(0px);
+        box-shadow: 5px 5px 5px 1px black;
+      }
     }
     .sect2 {
       .comics__item {
@@ -154,5 +159,8 @@
     .all {
       padding: 10px 20px;
     }
+  }
+  .show {
+    transform: translateY(1px);
   }
 }
