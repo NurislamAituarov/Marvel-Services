@@ -41,6 +41,7 @@
       span {
         display: inline-block;
         margin-top: 20px;
+        margin-left: 20px;
         font-weight: bold;
       }
     }
@@ -65,7 +66,9 @@
   margin: 40px auto;
 }
 .btn:hover {
-  transform: scale(1.1);
+  background-color: rgb(204, 204, 204);
+  color: black;
+  font-weight: bold;
 }
 .btn__active {
   color: red;
@@ -84,12 +87,20 @@
     }
   }
   .wrapperComics {
+    padding-bottom: 50px;
     .block__2 {
       grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 0px;
       .comicsItem {
         height: 316px;
+        // padding: 0px 10px;
+        img {
+          height: 75%;
+        }
         span {
           margin: 0;
+          line-height: 23px;
         }
       }
     }

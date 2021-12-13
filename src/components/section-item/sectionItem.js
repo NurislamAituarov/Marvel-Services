@@ -1,10 +1,10 @@
 import Services from '../../services/services';
 import './sectionItem.scss';
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import Spinner from '../../spinner/spinner';
 import ContentLoader from 'react-content-loader';
 
-const SectionItem = ({ id }) => {
+const SectionItem = memo(({ id }) => {
   const [state, setState] = useState(false);
   const [loading, setLoading] = useState(false);
   const services = new Services();
@@ -13,6 +13,7 @@ const SectionItem = ({ id }) => {
     if (id) {
       setLoading(true);
       services.getCharacter(id).then((res) => {
+        console.log(res.data.results[0]);
         setState({
           arr: res.data.results[0].comics.items,
           url: res.data.results[0].thumbnail.path + '.' + res.data.results[0].thumbnail.extension,
@@ -73,7 +74,7 @@ const SectionItem = ({ id }) => {
       </div>
     </>
   );
-};
+});
 export default SectionItem;
 
 const View = ({ state }) => {

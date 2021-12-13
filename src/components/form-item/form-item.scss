@@ -68,7 +68,14 @@
 // media///////
 @media (max-width: 768px) {
   .wrapper__char {
+    margin-top: 5px;
     display: block;
     padding-bottom: 50px;
+    h2 {
+      margin-bottom: 0px;
+    }
+    a {
+      margin-left: 20px;
+    }
   }
 }

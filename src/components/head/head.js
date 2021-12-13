@@ -32,7 +32,7 @@ const Head = () => {
 
   const updateChar = () => {
     setLoaded(true);
-    const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
+    const id = Math.floor(Math.random() * (1011400 - 1011100) + 1011000);
     services.getCharacter(id).then((res) => {
       setLoaded(false);
 

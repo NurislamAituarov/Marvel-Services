@@ -19,6 +19,7 @@ const Section = () => {
       setState((state) => [...state, ...elem.data.results]);
     });
   }, []);
+
   const onClick = (id) => {
     setId(id);
   };
@@ -35,7 +36,6 @@ const Section = () => {
         e.preventDefault();
 
         const blockID = anchor.getAttribute('href').substr(1);
-
         document.getElementById(blockID).scrollIntoView({
           behavior: 'smooth',
           block: 'start',
@@ -43,6 +43,7 @@ const Section = () => {
       });
     }
     return state.map((elem, i) => {
+      // console.log(elem);
       return (
         <div
           onKeyPress={(e) => {

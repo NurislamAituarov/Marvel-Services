@@ -11,8 +11,10 @@ const ComicsItem = () => {
   const services = new Services();
 
   useEffect(() => {
-    services.getComic(comicsId).then((arr) => setComic(arr.data.results));
-  });
+    services.getComic(comicsId).then((arr) => {
+      setComic(arr.data.results);
+    });
+  }, []);
 
   const contentItemComic = () => {
     return comic.map((elem) => {

@@ -28,11 +28,14 @@
     background-color: rgb(85, 85, 85);
     border-radius: 5px;
     color: white;
-    transition: 0.5s;
+    transition: 0.3s;
     margin-bottom: 20px;
     font-size: 25px;
     font-weight: bold;
     border: none;
+  }
+  button:hover {
+    background-color: black;
   }
 }
 .error {
@@ -59,6 +62,9 @@
 // media////////////////////////////////////////////////
 
 @media (max-width: 768px) {
+  .formCharacter {
+    text-align: center;
+  }
   .form {
     div {
       display: block;
